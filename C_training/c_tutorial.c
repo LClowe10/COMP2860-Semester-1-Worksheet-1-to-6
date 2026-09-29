@@ -20,7 +20,7 @@ int main(void) {
     // terminate the string by placing '\0' in the current
     // location of buffer.
 
-    // PLACE YOUR CODE HERE
+    if (((*current_char = getchar()) != (' ' || '\n' || '	')) && *current_char - 1 )
 
     // If the current character is an ordinary character
     // after a special character save the pointer to it in
