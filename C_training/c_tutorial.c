@@ -20,16 +20,26 @@ int main(void) {
     // terminate the string by placing '\0' in the current
     // location of buffer.
 
-    if (((*current_char = getchar()) != (' ' || '\n' || '	')) && *current_char - 1 )
+    if ((*current_char == ' ' || *current_char == '\t' || *current_char == '\n')) {
+      *current_char = '\0';
+      prev_char_not_ordinary = 1;
+    }
 
     // If the current character is an ordinary character
     // after a special character save the pointer to it in
     // the words[] array.
     else if (prev_char_not_ordinary) {
       // PLACE YOUR CODE HERE
+      if (i < 20) {
+        words[i] = current_char;
+        i++;
+      }
+
+      prev_char_not_ordinary = 0;
     }
     // Move the pointer in buff by one place.
     // PLACE YOUR CODE HERE
+    current_char++;
   }
   *current_char = '\0';
   printf("\n");
