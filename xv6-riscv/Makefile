@@ -152,6 +152,7 @@ UPROGS=\
 	$U/_getyear\
 	$U/_run_command\
 	$U/_pingpong0\
+	$U/_pingpong1\
 
 fs.img: mkfs/mkfs README $(UPROGS)
 	mkfs/mkfs fs.img README $(UPROGS)
