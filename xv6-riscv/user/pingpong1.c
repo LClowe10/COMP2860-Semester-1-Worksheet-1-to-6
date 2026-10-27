@@ -21,7 +21,7 @@ int main() {
     wait(0);
     read(p[0], &our_byte, 1);
     close(p[0]);
-    printf("%d: recieved ping, %c\n", getpid(), our_byte);
+    printf("%d: recieved pong, %c\n", getpid(), our_byte);
   }
   else if (pid == 0) {
     // 2. PLACE YOUR CODE HERE TO READ A BYTE IN THE PIPE p2c
